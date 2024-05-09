@@ -2,13 +2,13 @@
 
 2. Create a database cursor to execute SQL queries. Functions for Data Manipulation: Done
 
-3. Create functions for adding new books, users, authors, and genres to the database.
+3. Create functions for adding new books, users, authors, and genres to the database. Done
 
 4. Implement functions for updating book availability, marking books as borrowed or returned.
 
-5. Develop functions for searching books by ISBN, title, author, or genre.
+5. Develop functions for searching books by ISBN, title, author, or genre. 
 
-6. Define functions for displaying lists of books, users, authors, and genres.
+6. Define functions for displaying lists of books, users, authors, and genres. Done
 
 7. Implement functions for user registration and viewing user details. User Interface Functions:
 
@@ -16,13 +16,13 @@
 
 9. Implement functions to handle user interactions using the input() function. Done
 
-10. Validate user input using regular expressions (regex) to ensure proper formatting. Error Handling: 
+10. Validate user input using regular expressions (regex) to ensure proper formatting. Error Handling: Done
 
 11. Use try, except, else, and finally blocks to manage errors gracefully. Done
 
 12. Handle exceptions related to database operations, input validation, and other potential issues. Done
 
-13. Provide informative error messages to guide users. Clean Code Principles:
+13. Provide informative error messages to guide users. Clean Code Principles: Done
 
 14. Use meaningful variable and function names that convey their purpose. Done
 
@@ -34,14 +34,14 @@
 
 18. Organize code into separate modules to promote modularity and maintainability. Done
 
-19. Create distinct modules for database operations, user interactions, error handling, and core functionalities. GitHub Repository:
+19. Create distinct modules for database operations, user interactions, error handling, and core functionalities. GitHub Repository: Done
 
-20. Create a GitHub repository for your project and commit code regularly.
+20. Create a GitHub repository for your project and commit code regularly. Done
 
 21. Maintain a clean and interactive README.md file in your GitHub repository, providing clear instructions on how to run the 
 application and explanations of its features.
 
-22. Include a link to your GitHub repository in your project documentation. Optional Bonus Points:
+22. Include a link to your GitHub repository in your project documentation. Optional Bonus Points: 
 
 23. User Authentication (Bonus): Implement a user authentication system that requires users to create accounts and log in before 
 accessing the library. This enhances security and allows for personalized features.
@@ -60,18 +60,26 @@ updated accordingly. Effective Project Communication:
 
 
 
-- Adding a new book with all relevant details.
-- Allowing users to borrow a book, marking it as "Borrowed."
-- Allowing users to return a book, marking it as "Available."
-- Searching for a book by its unique identifier (ISBN or title) and displaying its details.
-- Displaying a list of all books with their unique identifiers.
-- Adding a new user with user details.
-- Viewing user details.
-- Displaying a list of all users.
-- Adding a new author with author details.
-- Viewing author details.
-- Displaying a list of all authors.
-- Adding a new genre with genre details.
-- Viewing genre details.
-- Displaying a list of all genres.
-- Quitting the application.
+- Adding a new book with all relevant details. Done
+- Allowing users to borrow a book, marking it as "Borrowed." Done
+- Allowing users to return a book, marking it as "Available." Done
+- Searching for a book by its unique identifier (ISBN or title) and displaying its details. Done
+- Displaying a list of all books with their unique identifiers. Done
+- Adding a new user with user details. Done
+- Viewing user details. Done
+- Displaying a list of all users. Done
+- Adding a new author with author details. Done
+- Viewing author details. Done
+- Displaying a list of all authors. Done
+- Adding a new genre with genre details. Done
+- Viewing genre details. Done
+- Displaying a list of all genres. Done
+- Quitting the application. Done
+
+
+Passing a dictionary into a MySQL database typically involves converting the dictionary into a format that MySQL can understand, 
+such as a list of tuples or a list of dictionaries. One common approach is to convert the dictionary into a list of tuples, 
+where each tuple represents a row of data to be inserted into the database.
+
+For example:
+data_list = [(key, value) for key, value in data.items()]
