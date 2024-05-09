@@ -700,8 +700,9 @@ class EditInfo:
 
   def edit_book():
     book_name = input("Enter Book to Edit: ").title()
-    if book_name not in book_info:
-        print(f"{book_name} not found in Library Data Base")
+    check_book = Book.get_book_id(book_name)
+    if check_book == False:
+      print(f"{book_name} Not Found Book Database")
     else:
       while True:
         try:
@@ -709,19 +710,25 @@ class EditInfo:
           book_edit_choice = input("Choose an option: ")
           if book_edit_choice == "1":
             author_edit = input("Enter Author Edit: ").title()
-            book_info[book_name].set_author(author_edit)
+            author_id = Author.get_author_id(author_edit)
+            if author_id == False:
+              pass
+
           elif book_edit_choice == "2":
             isbn_edit = int(input("Enter New ISBN"))
-            book_info[book_name].set_isbn(isbn_edit)
+            
           elif book_edit_choice == "3":
             genre_edit = input("Enter New Genre: ").title()
-            book_info[book_name].set_genre(genre_edit)
+            genre_id = Genre.get_genre_id(genre_edit)
+            if genre_id == False:
+              pass 
+
           elif book_edit_choice == "4":
             publication_date_edit = input("Enter New Publication Date YYYY-MM-DD: ")
-            book_info[book_name].set_publication_date(publication_date_edit)
+     
           elif book_edit_choice =="5":
-            print("Coming Soon...")
-            pass
+            title_edit = ("Enter title edit: ").title()
+
           elif book_edit_choice == "6":
             print("Return to Book Menu...")
             break
@@ -735,44 +742,59 @@ class EditInfo:
       user_name = input("Enter Users First and Last Name to Edit: ").title()
       user_id = User.get_user_id(user_name)
       if user_id == False:
-        print(f"'{user_name}' Not Found")
-      while True:
-        print("User Edit Menu:\n1. Edit Name\n2. Edit Library I.D.\n3. Exit")
-        edit_user_choice = input("Choose Menu Option: ")
-        if edit_user_choice == "1":
-          pass
-        elif edit_user_choice == "2":
-          user_new_id= int(input("Enter new Library I.D. Number: "))
-        elif edit_user_choice == "3":
-          print("Returning to User Menu...")
-          break
-        else:
-          print("Invalid Choice")
+        print(f"'{user_name}' Not Found in User Database")
+      else:
+        while True:
+          print("User Edit Menu:\n1. Edit Name\n2. Edit Library I.D.\n3. Exit")
+          edit_user_choice = input("Choose Menu Option: ")
+          if edit_user_choice == "1":
+            pass
+          elif edit_user_choice == "2":
+            user_new_id= int(input("Enter new Library I.D. Number: "))
+          elif edit_user_choice == "3":
+            print("Returning to User Menu...")
+            break
+          else:
+            print("Invalid Choice")
     except ValueError:
       print("Enter a 'Number' for the Library I.D.")
 
   def edit_author(author_info):
     author_name = input("Enter Author to edit: ").title()
-    if author_name not in author_info:
-      print(f"{author_name} not found in Author Data Base")
+    author_search = Author.get_author_id(author_name)
+    if author_search == False:
+      print(f"{author_name} Not Found in Author Database")
     else:
-      author_edit = input("Enter New Biography: ")
-      author_info[author_name].set_biography(author_edit)
+      while True:
+        print("Author Edit Menu:\n1. Edit Name\n2. Edit Biography\n3. Exit")
+        author_edit_choice = input("Choose Menu Option: ")
+        if author_edit_choice == "1":
+          pass
+        elif author_edit_choice == "2":
+          author_edit = input("Enter New Biography: ")
+        elif author_edit_choice == "3":
+          print("Returning to Author Menu...")
+          break
+        else:
+          print("Invalid Choice")
 
   def edit_genre(genre_information):
     genre_name = input("Enter Genre to edit: ").title()
-    if genre_name not in genre_information:
-      print(f"{genre_name} not found in Genre Data Base")
+    search_genre = Genre.get_genre_id(genre_name)
+    if search_genre == False:
+      print(f"{genre_name} Not Found in Genre Database")
     else:
       while True:
-        print("Edit Genre Menu:\n1. Description\n2. Category\n3. Exit")
+        print("Edit Genre Menu:\n1. Edit Genre Name\n2. Edit Description\n3. Edit Category\n4. Exit")
         edit_choice = input("Choose Menu Option: ")
         if edit_choice == "1":
+          pass 
+        elif edit_choice == "2":
           new_description = input(f"Enter new Description for {genre_name}: ").capitalize()
-          genre_information[genre_name].set_description(new_description)
+          
         elif edit_choice == "2":
           new_category = input(f"Enter new Category for {genre_name}: ").title()
-          genre_information[genre_name].set_category(new_category)
+          
         elif edit_choice == "3":
           print("Returning to Genre Menu...")
           break
