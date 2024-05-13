@@ -255,7 +255,7 @@ class UserInterface:
     if borrowed_books is not None:
       for borrowed_book in borrowed_books[0]:
         self.borrowed_books_information[borrowed_book.get_id()] = borrowed_book
-        
+
     # Users Class
     users = U.get_users_rows()
     for user in users[0]:

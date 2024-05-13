@@ -136,4 +136,4 @@ class BorrowedBooks:
 
   def view_borrowed_books(self):
     print("Books Checked Out:")
-    print(f"\nBook Title: {self.getting_book_title(self.get_id())}\nBook I.D. Number: {self.get_book_id()}\nUsers Name: {self.getting_users_name(self.get_id())}\nUsers I.D. Number: {self.get_user_id()}\nDate Borrowed: {self.get_borrow_date()}\nReturn Date: {self.get_return_date()}\n")
+    print(f"\nBook Title: {self.getting_book_title(self.get_id())}\nBook I.D. Number: {self.get_book_id()}\nUsers Name: {self.getting_users_name(self.get_id())}\nUsers I.D. Number: {self.get_user_id()}\nDate Borrowed: {self.get_borrow_date()}\nReturn Date: {self.get_return_date()}\nBorrowed Book Loan I.D.: {self.get_id()}")

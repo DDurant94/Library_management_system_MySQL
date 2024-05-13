@@ -12,7 +12,7 @@ class EditInfo:
       book_name = input("Enter Book Title to Edit: ").title()
       B.search_book_name_for_id(book_name)
       while True:
-          print("Book Edit Menu:\n1. Author\n2. ISBN\n3. Genre\n4. Publication Date\n5. Change Title\n6. Exit")
+          print("Book Edit Menu:\n1. Edit Author\n2. Edit ISBN\n3. Edit Genre\n4. Edit Publication Date\n5. Edit Title\n6. Exit")
           book_edit_choice = input("Choose an option: ")
           if book_edit_choice == "1":
             try:
@@ -144,7 +144,7 @@ class EditInfo:
         print(f"'{book_title}' is not in Borrowed Books")
       else:
         while True:
-          print("Borrowed Book Menu:\n1. Edit User\n2. Edit Author\n3. Edit Borrow Date\n4. Edit Return Date\n5. Exit")
+          print("Borrowed Book Menu:\n1. Edit User\n2. Edit Borrow Date\n3. Edit Return Date\n4. Exit")
           borrowed_book_edit_choice = input("Choose Menu Option: ")
           if borrowed_book_edit_choice == "1":
             try:
@@ -154,19 +154,12 @@ class EditInfo:
             except UserError as ue:
               print(f"{ue}")
           elif borrowed_book_edit_choice == "2":
-            try:
-              author_edit = input("Enter New Author First and Last Name: ")
-              author_id = A.search_author_name_for_id(author_edit)
-              borrowed_books_information[borrowed_book_id].set_author_id(author_id)
-            except AuthorsError as ae:
-              print(f"{ae}. Add '{author_edit}' or Choose User that is in User Database")
-          elif borrowed_book_edit_choice == "3":
             new_borrow_date = input("Enter New Borrow Date [YYYY-MM-DD]: ")
             borrowed_books_information[borrowed_book_id].set_borrow_date(new_borrow_date)
-          elif borrowed_book_edit_choice == "4":
+          elif borrowed_book_edit_choice == "3":
             new_return_date = input("Enter New Return Date [YYYY-MM-DD]: ")
             borrowed_books_information[borrowed_book_id].set_return_date(new_return_date)
-          elif borrowed_book_edit_choice == "5":
+          elif borrowed_book_edit_choice == "4":
             borrowed_books_information[borrowed_book_id].update_borrowed_books_save()
             print("Returning Borrowed Book Menu...")
             break
