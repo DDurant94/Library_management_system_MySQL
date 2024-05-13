@@ -1,6 +1,6 @@
 import mysql.connector
 from mysql.connector import Error
-
+# Connecting to MySQL with mysql.connector
 def connect_database():
 # Database Connection Parameters
   db_name = "LibraryManagementSystem"
@@ -15,7 +15,6 @@ def connect_database():
       password = password,
       host = host 
     )
-    print(f"Connected to MySQL Database Successfully!")
     return conn
   except Error as e:
     print(f"Error: {e}")
