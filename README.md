@@ -1,6 +1,8 @@
 # Library Management System
 
 Author: Daniel Durant
+GitHub Account: https://github.com/DDurant94/Library_management_system_MySQL
+
 
 # Imports/Installs:
 Python: https://www.python.org/downloads/
