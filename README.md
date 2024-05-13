@@ -1,4 +1,4 @@
-# Library Managment System
+# Library Management System
 
 Author: Daniel Durant
 
@@ -14,11 +14,11 @@ Import: mysql.connector, from mysql.connector import Error, and Regex (import re
 # Intro:
 LIbrary Management System is a Python based program that is integrated with a MySQL database to allow for a smooth and safe storage of information. This is a Command line program for
 Library Management allowing for Books, Authors, Genres, and Users to be added and used within this system. This is a program that a Librarian would use to manage their 
-Library. The program can eaisly be scaled up to allow for a user interface program to be added in the future. Making the information that only customers would be able to see 
-and interact with within the library. The module disign of this program allows for programers to move between each of the functions and make changes as needed or add 
+Library. The program can easily be scaled up to allow for a user interface program to be added in the future. Making the information that only customers would be able to see 
+and interact with within the library. The module design of this program allows for programers to move between each of the functions and make changes as needed or add 
 new functions to the program with easy. 
 
-# Intergration of Library Managment System:
+# Integration of Library Management System:
 Installation and Setup:
 First, ensure you have Python installed on your system (it usually comes pre-installed on most Linux computers and Macs).
 Next, install the MySQL Connector/Python library. You can obtain it from the official MySQL website or use pip to install it directly:
@@ -28,10 +28,10 @@ Connecting to MySQL:
 To establish a connection to your MySQL server, use the necessary connection details (hostname, username, password, etc.): (Provided once customer decides to use this program 
 within their system) Once LMS is intergraded the staff of the library will be able to add in information regarding to that library or transfer information from their old database.
 
-# Library Managment System Features:
+# Library Management System Features:
 Books:
 1. Adding:
-Each book needs a Title, Author, ISBN, Genre, Publication Date, Availability (auto set availabile when adding a new book). When adding a book it will auto add a Genre and or
+Each book needs a Title, Author, ISBN, Genre, Publication Date, Availability (auto set available when adding a new book). When adding a book it will auto add a Genre and or
 Author to the database. That is not the case when editing but only when adding a book into the database.
 3. Editing:
 Each book can be edited from the title the availability.
@@ -39,15 +39,15 @@ Each book can be edited from the title the availability.
 Each book can be viewed on its own or the user can view the whole library. (Future updates of viewing: View By Author, View By Genre, View By Letter/Letters, View By Availability)
 5. Checking in/out:
 Ability to check books in or out.
-6. Delteing Book:
+6. Deleting Book:
 Ability to remove books
 
 Users:
 1. Adding:
-Each users needs a First and Last name (authenticator for name to chack if it meets standards), and Library ID. (Future updates: Account Balance for Late Fees.
+Each users needs a First and Last name (authenticator for name to check if it meets standards), and Library ID. (Future updates: Account Balance for Late Fees.
 After a set amount user can not check out books)
 2. Editing:
-Each user can be edited and ajusted in all aspects.
+Each user can be edited and adjusted in all aspects.
 3. Viewing:
 Each user can be viewed showing Name, Library ID, Database ID, and Book that person has checked out.
 4. Deleting:
@@ -57,26 +57,26 @@ Genres:
 1. Adding:
 Each Genre only needs a name. The Category and Description are optional. Both can be added in at the time being add or later Date.
 2. Editing:
-Each Genre can be edited and ajusted in all aspects.
+Each Genre can be edited and adjusted in all aspects.
 3. Viewing:
 Each Genre when view shows Genre Name, ID, Category, and Description (Future updates of viewing: Showing all book in Genre)
 4. Deleting:
-Deleteing a Genre can only be done if there is no book in the database with that Genre. 
+Deleting a Genre can only be done if there is no book in the database with that Genre. 
 
 Authors:
 1. Adding:
 Each Author only needs a Name. The Biography is optional and can be added at a later date.
 2. Editing:
-Each Author can be edited and ajusted in all aspects.
+Each Author can be edited and adjusted in all aspects.
 3. Viewing:
 Each Author when view shows Author Name, ID, and Biography (Future updates of viewing: Showing all book That have the Author linked to them)
 4. Deleting:
-Deleteing a Genre can only be done if there is no book in the database with that Author. 
+Deleting a Genre can only be done if there is no book in the database with that Author. 
 
 Borrowed Books:
 1. Adding:
-When adding a borrowed book from Borrowed Books Menu, it's to be noted that it is doing so manually and not from the book oporations. Checking in or out a book you will need User
-First and Last Name, Title, and Date of check out (Return date is auto set to none). When Adding Menually the same will apply.
+When adding a borrowed book from Borrowed Books Menu, it's to be noted that it is doing so manually and not from the book operations. Checking in or out a book you will need User
+First and Last Name, Title, and Date of check out (Return date is auto set to none). When Adding Manually the same will apply.
 (Future updates: Adding Auto Return Date (Length set by Library), Late Fees (Amount set by Library), and Warnings for users with outstanding balance) 
 2. Editing:
 When editing a book that is out on loan you can change User, Checkout Date, and Return Date.
@@ -84,14 +84,14 @@ When editing a book that is out on loan you can change User, Checkout Date, and 
 When viewing borrowed books you can either search for a book thats been checked out or view all books that are out on loan. When viewing you will see Book Title, Book ID, User Name,
 User ID, Borrow Date, Return Date, Borrow ID. (Future updates of viewing: View by due date, and View by checkout date) 
 4. Deleting:
-Deleteing a Borrowed book is done manually or when the book is checked back in.
+Deleting a Borrowed book is done manually or when the book is checked back in.
 
 Error Handling:
 When the program runs into a issue with user input the program will prompt the user with a message explaining what has happened and in some case what they can do to fix the problem 
 (Ex. 'Author' is not in Database. Add 'Author' or choose a different Author)
 
 # How to Use Library Management System:
-The user will be promped with menu options and inputs that will need to be followed. The program has ex. for the user to see and will need to match for the program to under stand 
+The user will be prompted with menu options and inputs that will need to be followed. The program has ex. for the user to see and will need to match for the program to under stand 
 the input. The command line program makes it easy for the user to follow along and run. If the user enters in the wrong kind of input the program will let them know what they have
 done wrong.
 
